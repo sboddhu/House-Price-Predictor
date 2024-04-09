@@ -6,5 +6,6 @@ x=df['Area(in sq. ft)'].values.reshape(-1,1)
 y=df['Price(in Rs.)'].values.reshape(-1,1)
 lin=LinearRegression()
 lin.fit(x,y)
+#save the model
 pickle.dump(lin,open('model.pkl','wb'))
 
